@@ -1,0 +1,14 @@
+.footer-section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-top: 1px solid #eee;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}

@@ -1,0 +1,19 @@
+.portfolio-section {
+  padding: 50px 20px;
+}
+
+.portfolio-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.portfolio-item iframe {
+  border-radius: 5px;
+}
