@@ -3,7 +3,7 @@ import Star from './Star';
 import useOnScreen from '../hooks/useOnScreen';
 import './HowItWorks.css';
 
-const HowItWorks = () => {
+const HowItWorks = ({ onScrollToContact }) => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.2 });
 
   return (
@@ -14,7 +14,9 @@ const HowItWorks = () => {
         <div className="step">
           <h3><Star /> Step 1: Connect with us virtually</h3>
           <p>Schedule a quick 15-minute call using the button below. We'll discuss your goals and brand.</p>
-          <button className="connect-button">CONNECT NOW</button>
+          <button className="connect-button" onClick={onScrollToContact}>
+            CONNECT NOW
+          </button>
         </div>
         <div className="step">
           <h3><Star /> Step 2: Tell Us Your Requirement</h3>
