@@ -1,20 +1,22 @@
-.faq-section {
-  padding: 50px 20px;
+.faq-list {
   max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin: 40px auto 0;
+  text-align: left;
 }
 
 .faq-item {
-  text-align: left;
-  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .faq-item h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: var(--text-color);
 }

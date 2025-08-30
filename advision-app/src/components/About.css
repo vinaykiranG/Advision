@@ -1,15 +1,18 @@
 .about-section {
-  padding: 50px 20px;
+  background-color: var(--secondary-bg);
+}
+
+.about-content {
   max-width: 800px;
   margin: 0 auto;
+  background-color: var(--primary-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.about-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.about-section p {
+.about-content p {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  color: var(--text-color);
 }

@@ -1,10 +1,13 @@
 import React from 'react';
 import Star from './Star';
+import useOnScreen from '../hooks/useOnScreen';
 import './FAQ.css';
 
 const FAQ = () => {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.2 });
+
   return (
-    <div className="faq-section">
+    <div ref={ref} className={`faq-section retro-section ${isVisible ? 'is-visible' : ''}`}>
       <h2>Frequently Asked Questions</h2>
       <div className="faq-list">
         <div className="faq-item">

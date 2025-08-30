@@ -1,11 +1,14 @@
 import React from 'react';
 import Star from './Star';
+import useOnScreen from '../hooks/useOnScreen';
 import './Portfolio.css';
 
 const Portfolio = () => {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.2 });
+
   return (
-    <div className="portfolio-section">
-      <h2><Star /> Our Creations. Your Results.</h2>
+    <div ref={ref} className={`portfolio-section retro-section ${isVisible ? 'is-visible' : ''}`}>
+      <h2><Star isTwinkling={true} /> Our Creations. Your Results.</h2>
       <p>Here are some examples of our AI-powered creations. We can apply this same dynamic approach to your brand to get you results.</p>
       <div className="portfolio-grid">
         <div className="portfolio-item">

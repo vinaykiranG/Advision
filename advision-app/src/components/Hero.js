@@ -4,7 +4,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <div className="hero-section">
+    <div className="hero-section retro-hero">
       <div className="hero-content">
         <h1 className="hero-headline">
           AdVision: Your Idea. An Ad. In 48 Hours. <Star />

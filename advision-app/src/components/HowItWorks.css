@@ -1,8 +1,4 @@
-.how-it-works-section {
-  padding: 50px 20px;
-}
-
-.how-it-works-section h2 {
+.retro-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
@@ -16,6 +12,10 @@
 
 .step {
   text-align: left;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .step h3 {
@@ -24,18 +24,5 @@
 }
 
 .connect-button {
-  background-color: #1A73E8;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 10px;
-}
-
-.connect-button:hover {
-  background-color: #1558b8;
 }

@@ -1,12 +1,15 @@
 import React from 'react';
 import Star from './Star';
+import useOnScreen from '../hooks/useOnScreen';
 import './HowItWorks.css';
 
 const HowItWorks = () => {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.2 });
+
   return (
-    <div className="how-it-works-section">
+    <div ref={ref} className={`how-it-works-section retro-section ${isVisible ? 'is-visible' : ''}`}>
       <h2>Our AI Workflow</h2>
-      <p>Our AI workflow processes your ideas into engaging ads, ready for customer engagement within 48 hours. <Star /></p>
+      <p>Our AI workflow processes your ideas into engaging ads, ready for customer engagement within 48 hours. <Star isTwinkling={true} /></p>
       <div className="steps">
         <div className="step">
           <h3><Star /> Step 1: Connect with us virtually</h3>

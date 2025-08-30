@@ -1,12 +1,15 @@
 import React from 'react';
 import Star from './Star';
+import useOnScreen from '../hooks/useOnScreen';
 import './Services.css';
 
 const Services = () => {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.2 });
+
   return (
-    <div className="services-section">
-      <h2><Star /> Our Services & Pricing</h2>
-      <p>Here are our services and prices in INR. <Star /></p>
+    <div ref={ref} className={`services-section retro-section ${isVisible ? 'is-visible' : ''}`}>
+      <h2><Star isTwinkling={true} /> Our Services & Pricing</h2>
+      <p>Here are our services and prices in INR.</p>
       <div className="service-categories">
         <div className="service-category">
           <h3><Star /> AI Video Ads Creation</h3>

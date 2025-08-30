@@ -1,10 +1,19 @@
+:root {
+  --primary-bg: #FDFBF7;
+  --secondary-bg: #A8DADC;
+  --accent-color: #FF4500;
+  --text-color: #333333;
+  --headline-font: 'Montserrat', sans-serif;
+  --body-font: 'Space Mono', monospace;
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--body-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFFFFF;
-  color: #333333;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
 }
 
 .App {
@@ -12,5 +21,36 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--headline-font);
+  color: var(--accent-color);
+}
+
+button {
+  font-family: var(--headline-font);
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 25px; /* Pill shape */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.retro-section {
+  padding: 50px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.retro-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
